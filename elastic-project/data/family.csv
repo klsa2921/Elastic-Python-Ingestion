@@ -1,0 +1,20 @@
+id,empid,relation,name,age,occupation,contact
+fam001,emp12345,Father,Robert Doe,55,Engineer,123-456-7890
+fam002,emp12345,Mother,Jane Doe,50,Teacher,123-456-7891
+fam003,emp12346,Father,Mark Smith,58,Doctor,987-654-3210
+fam004,emp12346,Mother,Lisa Smith,52,Nurse,987-654-3211
+fam005,emp12347,Father,Richard Brown,60,Architect,555-555-5555
+fam006,emp12347,Mother,Patricia Brown,57,Designer,555-555-5556
+fam007,emp12348,Husband,Michael Davis,30,Software Developer,333-333-3333
+fam008,emp12349,Wife,Emma Wilson,28,Graphic Designer,444-444-4444
+fam009,emp12349,Father,David Wilson,60,Retired,444-444-4445
+fam010,emp12350,Father,William Taylor,65,Professor,222-222-2222
+fam011,emp12350,Mother,Susan Taylor,63,Artist,222-222-2223
+fam012,emp12351,Father,James Anderson,58,Construction Worker,555-555-5557
+fam013,emp12351,Mother,Marie Anderson,55,Chef,555-555-5558
+fam014,emp12352,Father,Thomas Thomas,60,Engineer,111-111-1111
+fam015,emp12352,Mother,Amy Thomas,58,Doctor,111-111-1112
+fam016,emp12353,Wife,Olivia Jackson,27,Teacher,666-666-6666
+fam017,emp12353,Father,David Jackson,63,Carpenter,666-666-6667
+fam018,emp12354,Husband,Christopher White,33,Marketing Specialist,777-777-7777
+fam019,emp12354,Wife,Sophia White,30,Graphic Designer,777-777-7778

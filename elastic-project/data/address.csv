@@ -1,0 +1,20 @@
+id,empid,street,city,zipcode,contact,country,state
+addr001,emp12345,123 Oak St,Springfield,62701,123-456-7890,USA,Illinois
+addr002,emp12345,456 Maple Ave,Springfield,62702,123-456-7891,USA,Illinois
+addr003,emp12346,456 Pine St,Greenwich,06830,987-654-3210,USA,Connecticut
+addr004,emp12346,789 Birch Rd,Greenwich,06831,987-654-3211,USA,Connecticut
+addr005,emp12347,789 Maple Ave,Lakewood,44107,555-555-5555,USA,Ohio
+addr006,emp12347,234 Oak St,Lakewood,44108,555-555-5556,USA,Ohio
+addr007,emp12348,321 Birch Rd,Clinton,07068,333-333-3333,USA,New Jersey
+addr008,emp12349,654 Cedar Ln,Newark,07102,444-444-4444,USA,New Jersey
+addr009,emp12349,321 Oak St,Newark,07103,444-444-4445,USA,New Jersey
+addr010,emp12350,987 Elm St,Montclair,07042,222-222-2222,USA,New Jersey
+addr011,emp12350,123 Maple Ave,Montclair,07043,222-222-2223,USA,New Jersey
+addr012,emp12351,234 Walnut St,Westfield,07090,555-555-5557,USA,New Jersey
+addr013,emp12351,567 Pine St,Westfield,07091,555-555-5558,USA,New Jersey
+addr014,emp12352,135 Redwood Dr,Union,07083,111-111-1111,USA,New Jersey
+addr015,emp12352,890 Birch Rd,Union,07084,111-111-1112,USA,New Jersey
+addr016,emp12353,765 Pinecrest Blvd,Elizabeth,07201,666-666-6666,USA,New Jersey
+addr017,emp12353,123 Oak Ave,Elizabeth,07202,666-666-6667,USA,New Jersey
+addr018,emp12354,890 Willow Way,Paterson,07501,777-777-7777,USA,New Jersey
+addr019,emp12354,456 Oak St,Paterson,07502,777-777-7778,USA,New Jersey

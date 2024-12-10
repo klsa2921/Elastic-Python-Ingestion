@@ -1,0 +1,492 @@
+[
+  {
+    "empid": "E12345",
+    "empname": "employee1",
+    "salary": 20000,
+    "family": [
+      {
+        "empid": "E12345",
+        "relation": "father",
+        "name": "John Doe",
+        "age": 55,
+        "occupation": "Engineer",
+        "contact": "123-456-7890"
+      },
+      {
+        "empid": "E12345",
+        "relation": "mother",
+        "name": "Jane Doe",
+        "age": 52,
+        "occupation": "Teacher",
+        "contact": "123-456-7891"
+      },
+      {
+        "empid": "E12345",
+        "relation": "wife",
+        "name": "Mary Doe",
+        "age": 30,
+        "occupation": "Doctor",
+        "contact": "123-456-7892"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12345",
+        "street": "123 Main St",
+        "city": "Springfield",
+        "state": "IL",
+        "zipcode": "62701",
+        "country": "USA"
+      },
+      {
+        "empid": "E12345",
+        "street": "456 Oak St",
+        "city": "Chicago",
+        "state": "IL",
+        "zipcode": "60601",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12346",
+    "empname": "employee2",
+    "salary": 22000,
+    "family": [
+      {
+        "empid": "E12346",
+        "relation": "father",
+        "name": "Robert Smith",
+        "age": 58,
+        "occupation": "Businessman",
+        "contact": "123-456-7893"
+      },
+      {
+        "empid": "E12346",
+        "relation": "mother",
+        "name": "Linda Smith",
+        "age": 55,
+        "occupation": "Nurse",
+        "contact": "123-456-7894"
+      },
+      {
+        "empid": "E12346",
+        "relation": "wife",
+        "name": "Sophia Smith",
+        "age": 28,
+        "occupation": "Architect",
+        "contact": "123-456-7895"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12346",
+        "street": "789 Elm St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipcode": "90001",
+        "country": "USA"
+      },
+      {
+        "empid": "E12346",
+        "street": "101 Pine St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipcode": "94101",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12347",
+    "empname": "employee3",
+    "salary": 25000,
+    "family": [
+      {
+        "empid": "E12347",
+        "relation": "father",
+        "name": "James Brown",
+        "age": 60,
+        "occupation": "Artist",
+        "contact": "123-456-7896"
+      },
+      {
+        "empid": "E12347",
+        "relation": "mother",
+        "name": "Patricia Brown",
+        "age": 58,
+        "occupation": "Scientist",
+        "contact": "123-456-7897"
+      },
+      {
+        "empid": "E12347",
+        "relation": "wife",
+        "name": "Olivia Brown",
+        "age": 35,
+        "occupation": "Engineer",
+        "contact": "123-456-7898"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12347",
+        "street": "123 Maple Ave",
+        "city": "New York",
+        "state": "NY",
+        "zipcode": "10001",
+        "country": "USA"
+      },
+      {
+        "empid": "E12347",
+        "street": "456 Birch Rd",
+        "city": "Brooklyn",
+        "state": "NY",
+        "zipcode": "11201",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12348",
+    "empname": "employee4",
+    "salary": 27000,
+    "family": [
+      {
+        "empid": "E12348",
+        "relation": "father",
+        "name": "Michael Lee",
+        "age": 62,
+        "occupation": "Manager",
+        "contact": "123-456-7899"
+      },
+      {
+        "empid": "E12348",
+        "relation": "mother",
+        "name": "Susan Lee",
+        "age": 60,
+        "occupation": "Doctor",
+        "contact": "123-456-7900"
+      },
+      {
+        "empid": "E12348",
+        "relation": "wife",
+        "name": "Ella Lee",
+        "age": 38,
+        "occupation": "Teacher",
+        "contact": "123-456-7901"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12348",
+        "street": "200 Oak Ave",
+        "city": "Boston",
+        "state": "MA",
+        "zipcode": "02101",
+        "country": "USA"
+      },
+      {
+        "empid": "E12348",
+        "street": "300 Pine Ave",
+        "city": "Cambridge",
+        "state": "MA",
+        "zipcode": "02138",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12349",
+    "empname": "employee5",
+    "salary": 29000,
+    "family": [
+      {
+        "empid": "E12349",
+        "relation": "father",
+        "name": "Daniel Harris",
+        "age": 65,
+        "occupation": "Retired",
+        "contact": "123-456-7902"
+      },
+      {
+        "empid": "E12349",
+        "relation": "mother",
+        "name": "Mary Harris",
+        "age": 63,
+        "occupation": "Retired",
+        "contact": "123-456-7903"
+      },
+      {
+        "empid": "E12349",
+        "relation": "wife",
+        "name": "Chloe Harris",
+        "age": 40,
+        "occupation": "Lawyer",
+        "contact": "123-456-7904"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12349",
+        "street": "500 Cedar Rd",
+        "city": "Houston",
+        "state": "TX",
+        "zipcode": "77001",
+        "country": "USA"
+      },
+      {
+        "empid": "E12349",
+        "street": "600 Spruce St",
+        "city": "Dallas",
+        "state": "TX",
+        "zipcode": "75201",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12350",
+    "empname": "employee6",
+    "salary": 23000,
+    "family": [
+      {
+        "empid": "E12350",
+        "relation": "father",
+        "name": "William Clark",
+        "age": 70,
+        "occupation": "Professor",
+        "contact": "123-456-7905"
+      },
+      {
+        "empid": "E12350",
+        "relation": "mother",
+        "name": "Elizabeth Clark",
+        "age": 68,
+        "occupation": "Scientist",
+        "contact": "123-456-7906"
+      },
+      {
+        "empid": "E12350",
+        "relation": "wife",
+        "name": "Nancy Clark",
+        "age": 45,
+        "occupation": "Manager",
+        "contact": "123-456-7907"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12350",
+        "street": "700 Redwood St",
+        "city": "Seattle",
+        "state": "WA",
+        "zipcode": "98001",
+        "country": "USA"
+      },
+      {
+        "empid": "E12350",
+        "street": "800 Aspen Ave",
+        "city": "Tacoma",
+        "state": "WA",
+        "zipcode": "98402",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12351",
+    "empname": "employee7",
+    "salary": 21000,
+    "family": [
+      {
+        "empid": "E12351",
+        "relation": "father",
+        "name": "Christopher Davis",
+        "age": 63,
+        "occupation": "Designer",
+        "contact": "123-456-7908"
+      },
+      {
+        "empid": "E12351",
+        "relation": "mother",
+        "name": "Patricia Davis",
+        "age": 60,
+        "occupation": "Engineer",
+        "contact": "123-456-7909"
+      },
+      {
+        "empid": "E12351",
+        "relation": "wife",
+        "name": "Sarah Davis",
+        "age": 34,
+        "occupation": "Doctor",
+        "contact": "123-456-7910"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12351",
+        "street": "900 Walnut St",
+        "city": "Denver",
+        "state": "CO",
+        "zipcode": "80201",
+        "country": "USA"
+      },
+      {
+        "empid": "E12351",
+        "street": "1000 Birch Rd",
+        "city": "Boulder",
+        "state": "CO",
+        "zipcode": "80301",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12352",
+    "empname": "employee8",
+    "salary": 24000,
+    "family": [
+      {
+        "empid": "E12352",
+        "relation": "father",
+        "name": "George Martinez",
+        "age": 68,
+        "occupation": "Consultant",
+        "contact": "123-456-7911"
+      },
+      {
+        "empid": "E12352",
+        "relation": "mother",
+        "name": "Maria Martinez",
+        "age": 65,
+        "occupation": "Nurse",
+        "contact": "123-456-7912"
+      },
+      {
+        "empid": "E12352",
+        "relation": "wife",
+        "name": "Linda Martinez",
+        "age": 33,
+        "occupation": "Architect",
+        "contact": "123-456-7913"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12352",
+        "street": "1100 Elm Ave",
+        "city": "Austin",
+        "state": "TX",
+        "zipcode": "73301",
+        "country": "USA"
+      },
+      {
+        "empid": "E12352",
+        "street": "1200 Maple Ave",
+        "city": "San Antonio",
+        "state": "TX",
+        "zipcode": "78201",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12353",
+    "empname": "employee9",
+    "salary": 26000,
+    "family": [
+      {
+        "empid": "E12353",
+        "relation": "father",
+        "name": "Henry Gonzalez",
+        "age": 72,
+        "occupation": "Retired",
+        "contact": "123-456-7914"
+      },
+      {
+        "empid": "E12353",
+        "relation": "mother",
+        "name": "Helen Gonzalez",
+        "age": 70,
+        "occupation": "Teacher",
+        "contact": "123-456-7915"
+      },
+      {
+        "empid": "E12353",
+        "relation": "wife",
+        "name": "Emma Gonzalez",
+        "age": 36,
+        "occupation": "Engineer",
+        "contact": "123-456-7916"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12353",
+        "street": "1300 Cedar Ave",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zipcode": "85001",
+        "country": "USA"
+      },
+      {
+        "empid": "E12353",
+        "street": "1400 Pine St",
+        "city": "Tucson",
+        "state": "AZ",
+        "zipcode": "85701",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "empid": "E12354",
+    "empname": "employee10",
+    "salary": 28000,
+    "family": [
+      {
+        "empid": "E12354",
+        "relation": "father",
+        "name": "David Moore",
+        "age": 74,
+        "occupation": "Consultant",
+        "contact": "123-456-7917"
+      },
+      {
+        "empid": "E12354",
+        "relation": "mother",
+        "name": "Deborah Moore",
+        "age": 71,
+        "occupation": "Teacher",
+        "contact": "123-456-7918"
+      },
+      {
+        "empid": "E12354",
+        "relation": "wife",
+        "name": "Olivia Moore",
+        "age": 37,
+        "occupation": "Scientist",
+        "contact": "123-456-7919"
+      }
+    ],
+    "address": [
+      {
+        "empid": "E12354",
+        "street": "1500 Willow St",
+        "city": "Miami",
+        "state": "FL",
+        "zipcode": "33101",
+        "country": "USA"
+      },
+      {
+        "empid": "E12354",
+        "street": "1600 Palm Ave",
+        "city": "Orlando",
+        "state": "FL",
+        "zipcode": "32801",
+        "country": "USA"
+      }
+    ]
+  }
+]
