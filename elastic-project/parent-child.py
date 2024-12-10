@@ -2,6 +2,8 @@ import json
 from elasticsearch import Elasticsearch, helpers
 from model.model import Employee,Address,FamilyMember
 import csv
+from run_querys import run_query_1,run_query_2,run_query_3
+
 
 def load_data(file_path):
     with open(file_path, 'r') as file:
@@ -76,13 +78,12 @@ def load_csv_files():
                 country = row["country"],
                 contact = row["contact"]
             )
-            print(row)
             addresses.append(address)
     return employees,family_members,addresses
 
 es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
 
-index_name = 'employee-parent-child4'
+index_name = 'employee-parent-child5'
 file_path = 'employee_nested_data.json'
 
 def generate_bulk_data_for_parent_child(employees, family_members, addresses, index_name):
@@ -239,8 +240,16 @@ def generate_bulk_data_for_nested(employees, family_members, addresses, index_na
 try:
 #    employees, family_members, addresses = load_data(file_path)
     employees, family_members, addresses = load_csv_files()
-    # helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses, index_name))
-    helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, "employee-nested4"))
+    helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses, index_name))
+    # helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, "employee-nested4"))
     print("Data indexed successfully!")
+
 except Exception as e:
     print(f"Error indexing data: {e}")
+
+
+run_query_1(index_name)
+print("/n")
+run_query_2(index_name)
+print("/n")
+run_query_3(index_name)
