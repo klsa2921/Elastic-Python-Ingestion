@@ -12,6 +12,8 @@ def load_data(file_path):
     employees = []
     family_members = []
     addresses = []
+    salary=[]
+    joiningDate=[]
 
     for item in data:
         employee = Employee(
@@ -79,6 +81,8 @@ def load_csv_files():
                 contact = row["contact"]
             )
             addresses.append(address)
+    
+    
     return employees,family_members,addresses
 
 es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
@@ -155,6 +159,8 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses, in
                 "emp-join-field": {"name": "address", "parent": address.empid}
             }
         }
+
+    
 
 def generate_bulk_data_for_nested(employees, family_members, addresses, index_name):
     if not es.indices.exists(index=index_name):
@@ -257,7 +263,6 @@ try:
     print("Data indexed successfully!")
 except Exception as e:
     print(f"Error indexing data: {e}")
-
 
 run_test_queries()
 

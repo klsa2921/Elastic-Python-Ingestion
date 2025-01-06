@@ -17,6 +17,9 @@ def load_csv_files():
     employee_file_path = "./data/employee.csv"
     family_file_path = "./data/family.csv"
     address_file_path = "./data/address.csv"
+    salary_file_path="./data/salary.csv"
+    joindate_file_path="./data/joiningDate.csv"
+
     
     with open(employee_file_path, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f)

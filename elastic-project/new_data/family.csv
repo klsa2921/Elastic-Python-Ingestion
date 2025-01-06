@@ -1,0 +1,61 @@
+id,empid,relation,name,age,occupation,contact
+fam001,emp12345,Father,Robert Doe,55,Engineer,123-456-7890
+fam002,emp12345,Mother,Jane Doe,50,Teacher,123-456-7891
+fam003,emp12346,Father,Mark Smith,58,Doctor,987-654-3210
+fam004,emp12346,Mother,Lisa Smith,52,Nurse,987-654-3211
+fam005,emp12347,Father,Richard Brown,60,Architect,555-555-5555
+fam006,emp12347,Mother,Patricia Brown,57,Designer,555-555-5556
+fam007,emp12347,Sister,Emily Brown,30,Teacher,555-555-5557
+fam008,emp12348,Husband,Michael Davis,30,Software Developer,333-333-3333
+fam009,emp12348,Wife,Anna Davis,28,Graphic Designer,333-333-3334
+fam010,emp12349,Wife,Emma Wilson,28,Graphic Designer,444-444-4444
+fam011,emp12349,Father,David Wilson,60,Retired,444-444-4445
+fam012,emp12350,Father,William Taylor,65,Professor,222-222-2222
+fam013,emp12350,Mother,Susan Taylor,63,Artist,222-222-2223
+fam014,emp12351,Father,James Anderson,58,Construction Worker,555-555-5557
+fam015,emp12351,Mother,Marie Anderson,55,Chef,555-555-5558
+fam016,emp12351,Sister,Olivia Anderson,30,Doctor,555-555-5559
+fam017,emp12352,Father,Thomas Thomas,60,Engineer,111-111-1111
+fam018,emp12352,Mother,Amy Thomas,58,Doctor,111-111-1112
+fam019,emp12352,Brother,Chris Thomas,32,Designer,111-111-1113
+fam020,emp12353,Wife,Olivia Jackson,27,Teacher,666-666-6666
+fam021,emp12353,Father,David Jackson,63,Carpenter,666-666-6667
+fam022,emp12353,Mother,Laura Jackson,60,Artist,666-666-6668
+fam023,emp12354,Husband,Christopher White,33,Marketing Specialist,777-777-7777
+fam024,emp12354,Wife,Sophia White,30,Graphic Designer,777-777-7778
+fam025,emp12354,Father,George White,65,Retired,777-777-7779
+fam026,emp12355,Father,George Harris,62,Doctor,888-888-8888
+fam027,emp12355,Mother,Emma Harris,58,Lawyer,888-888-8889
+fam028,emp12355,Sister,Lily Harris,29,Consultant,888-888-8890
+fam029,emp12356,Father,James Lee,59,Chef,999-999-9999
+fam030,emp12356,Mother,Susan Lee,55,Artist,999-999-9990
+fam031,emp12357,Father,Mark Clark,64,Retired,555-777-8889
+fam032,emp12357,Mother,Patricia Clark,60,Scientist,555-777-8880
+fam033,emp12357,Sister,Rebecca Clark,34,Teacher,555-777-8881
+fam034,emp12358,Father,Robert Harris,66,Engineer,777-555-3333
+fam035,emp12358,Mother,Julia Harris,62,Teacher,777-555-3334
+fam036,emp12358,Brother,Lucas Harris,33,Software Developer,777-555-3335
+fam037,emp12359,Father,John Walker,67,Architect,444-222-8889
+fam038,emp12359,Mother,Jessica Walker,63,Writer,444-222-8888
+fam039,emp12359,Sister,Emily Walker,30,Photographer,444-222-8887
+fam040,emp12360,Father,Samuel Young,61,Mechanic,555-666-4445
+fam041,emp12360,Mother,Anna Young,59,Doctor,555-666-4446
+fam042,emp12360,Brother,Ethan Young,25,Teacher,555-666-4447
+fam043,emp12361,Father,John King,65,Consultant,777-888-9999
+fam044,emp12361,Mother,Emily King,60,Teacher,777-888-9990
+fam045,emp12361,Brother,Michael King,32,Artist,777-888-9991
+fam046,emp12362,Father,Robert Scott,62,Doctor,444-333-2222
+fam047,emp12362,Mother,Linda Scott,58,Engineer,444-333-2223
+fam048,emp12362,Sister,Carol Scott,33,Photographer,444-333-2224
+fam049,emp12363,Father,Charles Green,60,Architect,111-222-3333
+fam050,emp12363,Mother,Grace Green,58,Scientist,111-222-3334
+fam051,emp12363,Sister,Lily Green,30,Designer,111-222-3335
+fam052,emp12364,Father,Paul Blue,64,Engineer,777-666-5555
+fam053,emp12364,Mother,Linda Blue,60,Teacher,777-666-5556
+fam054,emp12364,Sister,Olivia Blue,32,Chef,777-666-5557
+fam055,emp12365,Father,Steven Brown,63,Doctor,444-777-5555
+fam056,emp12365,Mother,Monica Brown,60,Artist,444-777-5556
+fam057,emp12365,Sister,Rachel Brown,29,Consultant,444-777-5557
+fam058,emp12366,Father,David White,65,Consultant,333-444-5555
+fam059,emp12366,Mother,Eliza White,63,Writer,333-444-5556
+fam060,emp12366,Sister,Jessica White,28,Engineer,333-444-5557
