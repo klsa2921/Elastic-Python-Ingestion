@@ -1,0 +1,7 @@
+Resources required to run the project:-
+=======================================
+
+1.Python has to be installed
+2.Install python 'elasticsearch' libraries .
+    pip install elasticsearch
+3.Run the main.py python file to create elasticsearch indexes with parent-child relation and nested documents.

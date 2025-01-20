@@ -1,6 +1,6 @@
 import json
 from elasticsearch import Elasticsearch, helpers
-from model.model import Employee,Address,FamilyMember,Salary,JoiningDate,Leaves
+from model.model import Employee,Address,FamilyMember,Salary,JoiningDate,Leaves,Employee2
 import csv
 from run_querys import run_query_1,run_query_2,run_query_3
 from test import compare_results
@@ -48,18 +48,32 @@ def load_csv_files():
     # leave_file_path="./new_data/employee_leaves.csv"
     leave_file_path="./new_data/updated_employee_leaves.csv"
 
+    employee_json_file_path="./new_data/empjson.json"
 
+    # with open(employee_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     for row in reader:
+    #         employee=Employee(
+    #             id=row['id'],
+    #             empid=row['empid'],
+    #             empname=row['empname'],
+    #             tablename='employee'
+    #         )
+    #         employees.append(employee)
 
     with open(employee_file_path,newline='',encoding='utf-8') as f:
-        reader=csv.DictReader(f)
-        for row in reader:
-            employee=Employee(
-                id=row['id'],
-                empid=row['empid'],
-                empname=row['empname'],
-                tablename='employee'
-            )
-            employees.append(employee)
+        with open(employee_json_file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for item in data['employees']:
+                employee = Employee2(
+                    id=item['id'],
+                    empid=item['empid'],
+                    empname=item['empname'],
+                    accesslist='#'.join(item['accesslist']),
+                    accessnamelist='#'.join(item['accessnamelist']),
+                    tablename='employee'
+                )
+                employees.append(employee)
 
     with open(family_file_path,newline='',encoding='utf-8') as f:
         reader=csv.DictReader(f)
@@ -135,9 +149,11 @@ def load_csv_files():
     
     return employees,family_members,addresses,salarys,joiningDate,leave_records
 
-es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
+# es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
+es = Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}])
 
-parent_child_index = 'employee-parent-child20'
+
+parent_child_index = 'employee-parent-child23'
 
 nested_index='employee-nested10'
 file_path = 'employee_nested_data.json'
@@ -162,16 +178,32 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
         es.indices.create(index=index_name, body=mappings)
         print(f"Index {index_name} created successfully.")
 
-    for employee in employees:
+    # for employee in employees:
     
+    #     yield {
+    #         "_op_type": "index",  
+    #         "_index": index_name,
+    #         "_id": employee.empid,  
+    #         "_source": {
+    #             "empid": employee.empid,
+    #             "empname": employee.empname,
+    #             "tablename":employee.tablename,
+    #             "emp-join-field": {"name": "employee"}
+    #         }
+    #     }
+    
+    for employee in employees:
         yield {
             "_op_type": "index",  
             "_index": index_name,
-            "_id": employee.empid,  
+            "_id": employee.id,  
             "_source": {
+                "id": employee.id,
                 "empid": employee.empid,
                 "empname": employee.empname,
-                "tablename":employee.tablename,
+                "accesslist": employee.accesslist,
+                "accessnamelist": employee.accessnamelist,
+                "tablename": employee.tablename,
                 "emp-join-field": {"name": "employee"}
             }
         }
@@ -214,21 +246,25 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
             }
         }
     
-    for salary in salarys:
-        yield{
-            "_op_type": "index",
-            "_index": index_name,
-            "_routing": salary.empid,  
-            "_id":salary.id,
-            "_source": {
-                "id":salary.id,
-                "empid": salary.empid,
-                "salary":salary.salary,
-                "tablename":salary.tablename,
-                "emp-join-field": {"name": "salary", "parent": salary.empid}
+    try:
+        for salary in salarys:
+            yield {
+                "_op_type": "index",
+                "_index": index_name,
+                "_routing": salary.empid,
+                "_id": salary.id,
+                "_source": {
+                    "id": salary.id,
+                    "empid": salary.empid,
+                    "salary": salary.salary,
+                    "tablename": salary.tablename,
+                    "emp-join-field": {"name": "salary", "parent": salary.empid}
+                }
             }
-        }
-    
+    except Exception as e:
+        print(f"Error processing salary data: {e}")
+
+    print("Processing join data")
     for joinDate in joiningDate:
         yield{
             "_op_type": "index",
@@ -239,7 +275,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
                 "id":joinDate.id,
                 "empid": joinDate.empid,
                 "joinDate":joinDate.joinDate,
-                "tablename":'joinDate',
+                "tablename":joinDate.tablename,
                 "emp-join-field": {"name": "joiningDate", "parent": joinDate.empid}
             }
         }
@@ -258,7 +294,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
                 "leave_end_date": leave.leave_end_date,  # End date of the leave
                 "number_of_days":int(leave.number_of_days),
                 "leave_status": leave.leave_status,  # Status of the leave
-                "tablename":'leaves',
+                "tablename":leave.tablename,
                 "emp-join-field": {"name": "leaves", "parent": leave.empid}  # Linking leave to employee
             }
         }
@@ -324,29 +360,29 @@ def generate_bulk_data_for_nested(employees, family_members, addresses, index_na
             }
         }
 
-    for address in addresses:
-        yield {
-            "_op_type": "update",  
-            "_index": index_name,
-            "_id": address.empid,  
-            "script": {
-                "source": """
-                    if (ctx._source.address == null) {
-                        ctx._source.address = [];
-                    }
-                    ctx._source.address.add(params.address);
-                """,
-                "params": {
-                    "address": {
-                        "street": address.street,  
-                        "city": address.city,
-                        "state": address.state,
-                        "zipcode": address.zipcode,
-                        "country": address.country
-                    }
-                }
-            }
-        }
+    # for address in addresses:
+    #     yield {
+    #         "_op_type": "update",  
+    #         "_index": index_name,
+    #         "_id": address.empid,  
+    #         "script": {
+    #             "source": """
+    #                 if (ctx._source.address == null) {
+    #                     ctx._source.address = [];
+    #                 }
+    #                 ctx._source.address.add(params.address);
+    #             """,
+    #             "params": {
+    #                 "address": {
+    #                     "street": address.street,  
+    #                     "city": address.city,
+    #                     "state": address.state,
+    #                     "zipcode": address.zipcode,
+    #                     "country": address.country
+    #                 }
+    #             }
+    #         }
+    #     }
 
 def run_test_queries():
     # run_query_1(parent_child_index)
@@ -436,23 +472,36 @@ def generate_bulk_data_for_documents(employees, family_members, addresses, salar
 
 
 
-try:
-    # employees, family_members, addresses = load_data(file_path)
-    employees, family_members, addresses,salarys,joiningDate ,leave_records= load_csv_files()
-    # print(salarys)
+# try:
+#     # employees, family_members, addresses = load_data(file_path)
+#     employees, family_members, addresses,salarys,joiningDate ,leave_records= load_csv_files()
+#     # print(salarys)
 
-    #insert employees
-    # helpers.bulk(es, generate_bulk_data_for_documents(employees, family_members, addresses,salarys,joiningDate,leave_records,parent_child_index))
+#     #insert employees
+#     # helpers.bulk(es, generate_bulk_data_for_documents(employees, family_members, addresses,salarys,joiningDate,leave_records,parent_child_index))
 
-    helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses,salarys,joiningDate,leave_records,parent_child_index))
-    # helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, nested_index))
-    print("Data indexed successfully!")
-except Exception as e:
-    print(f"Error indexing data: {e}")
+#     helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses,salarys,joiningDate,leave_records,parent_child_index))
+#     # helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, nested_index))
+#     print("Data indexed successfully!")
+# except Exception as e:
+#     print(f"Error indexing data: {e}")
+
+
+
 
 # run_test_queries()
 
-
+try:
+    employees, family_members, addresses, salarys, joiningDate, leave_records = load_csv_files()
+    response = helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses,salarys,joiningDate,leave_records,parent_child_index))
+    print("Data indexed successfully!")
+    print(f"Indexed {response[0]} documents successfully.")
+    if response[1]:
+        print(f"Failed to index {len(response[1])} documents.")
+        for error in response[1]:
+            print(error)
+except Exception as e:
+    print(f"Error indexing data: {e}")
 
 
 

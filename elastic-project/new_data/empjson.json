@@ -1,0 +1,339 @@
+{
+    "employees": [
+        {
+            "id": "employee12345",
+            "empid": "emp12345",
+            "empname": "John Doe",
+            "deptid": "D01",
+            "salaryid": "sal1",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        },
+        {
+            "id": "employee12346",
+            "empid": "emp12346",
+            "empname": "Jane Smith",
+            "deptid": "D02",
+            "salaryid": "sal2",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12347",
+            "empid": "emp12347",
+            "empname": "James Brown",
+            "deptid": "D03",
+            "salaryid": "sal3",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12348",
+            "empid": "emp12348",
+            "empname": "Emily Davis",
+            "deptid": "D04",
+            "salaryid": "sal4",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12349",
+            "empid": "emp12349",
+            "empname": "Michael Wilson",
+            "deptid": "D05",
+            "salaryid": "sal6",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12350",
+            "empid": "emp12350",
+            "empname": "Olivia Taylor",
+            "deptid": "D02",
+            "salaryid": "sal5",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12351",
+            "empid": "emp12351",
+            "empname": "William Anderson",
+            "deptid": "D03",
+            "salaryid": "sal8",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12352",
+            "empid": "emp12352",
+            "empname": "Isabella Thomas",
+            "deptid": "D04",
+            "salaryid": "sal10",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12353",
+            "empid": "emp12353",
+            "empname": "Matthew Jackson",
+            "deptid": "D05",
+            "salaryid": "sal7",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12354",
+            "empid": "emp12354",
+            "empname": "Sophia White",
+            "deptid": "D01",
+            "salaryid": "sal9",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        },
+        {
+            "id": "employee12355",
+            "empid": "emp12355",
+            "empname": "David Harris",
+            "deptid": "D02",
+            "salaryid": "sal11",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12356",
+            "empid": "emp12356",
+            "empname": "Anna Lee",
+            "deptid": "D03",
+            "salaryid": "sal12",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12357",
+            "empid": "emp12357",
+            "empname": "Robert Clark",
+            "deptid": "D04",
+            "salaryid": "sal13",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12358",
+            "empid": "emp12358",
+            "empname": "Lisa Harris",
+            "deptid": "D05",
+            "salaryid": "sal14",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12359",
+            "empid": "emp12359",
+            "empname": "Daniel Walker",
+            "deptid": "D01",
+            "salaryid": "sal15",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        },
+        {
+            "id": "employee12360",
+            "empid": "emp12360",
+            "empname": "Jessica Young",
+            "deptid": "D02",
+            "salaryid": "sal16",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12361",
+            "empid": "emp12361",
+            "empname": "Christopher King",
+            "deptid": "D03",
+            "salaryid": "sal17",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12362",
+            "empid": "emp12362",
+            "empname": "Charlotte Scott",
+            "deptid": "D04",
+            "salaryid": "sal18",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12363",
+            "empid": "emp12363",
+            "empname": "Matthew Allen",
+            "deptid": "D05",
+            "salaryid": "sal19",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12364",
+            "empid": "emp12364",
+            "empname": "Katherine White",
+            "deptid": "D01",
+            "salaryid": "sal20",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        },
+        {
+            "id": "employee12365",
+            "empid": "emp12365",
+            "empname": "Daniel Wright",
+            "deptid": "D02",
+            "salaryid": "sal21",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12366",
+            "empid": "emp12366",
+            "empname": "James Turner",
+            "deptid": "D03",
+            "salaryid": "sal22",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12367",
+            "empid": "emp12367",
+            "empname": "Elizabeth Lee",
+            "deptid": "D04",
+            "salaryid": "sal23",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12368",
+            "empid": "emp12368",
+            "empname": "Joshua Moore",
+            "deptid": "D05",
+            "salaryid": "sal24",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12369",
+            "empid": "emp12369",
+            "empname": "Nicole Martinez",
+            "deptid": "D01",
+            "salaryid": "sal25",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        },
+        {
+            "id": "employee12370",
+            "empid": "emp12370",
+            "empname": "Samuel Garcia",
+            "deptid": "D02",
+            "salaryid": "sal26",
+            "accesslist": ["acc126", "acc123"],
+            "accessnamelist": ["Admin", "HR"]
+        },
+        {
+            "id": "employee12371",
+            "empid": "emp12371",
+            "empname": "Anna Robinson",
+            "deptid": "D03",
+            "salaryid": "sal27",
+            "accesslist": ["acc126", "acc123", "acc124"],
+            "accessnamelist": ["Admin", "HR", "Manager"]
+        },
+        {
+            "id": "employee12372",
+            "empid": "emp12372",
+            "empname": "Michael Nelson",
+            "deptid": "D04",
+            "salaryid": "sal28",
+            "accesslist": ["acc128"],
+            "accessnamelist": ["Super Admin"]
+        },
+        {
+            "id": "employee12373",
+            "empid": "emp12373",
+            "empname": "Karen Perez",
+            "deptid": "D05",
+            "salaryid": "sal29",
+            "accesslist": ["acc126", "acc123", "acc124", "acc125"],
+            "accessnamelist": ["Admin", "HR", "Manager", "Team Lead"]
+        },
+        {
+            "id": "employee12374",
+            "empid": "emp12374",
+            "empname": "Robert Brown",
+            "deptid": "D01",
+            "salaryid": "sal30",
+            "accesslist": ["acc126"],
+            "accessnamelist": ["Admin"]
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "deptid": "D01",
+            "deptname": "HR"
+        },
+        {
+            "id": 2,
+            "deptid": "D02",
+            "deptname": "Manager"
+        },
+        {
+            "id": 3,
+            "deptid": "D03",
+            "deptname": "Team Lead"
+        },
+        {
+            "id": 4,
+            "deptid": "D04",
+            "deptname": "Admin"
+        },
+        {
+            "id": 5,
+            "deptid": "D05",
+            "deptname": "Employee"
+        }
+    ],
+    "accesslist": [
+        {
+            "id": 1,
+            "accessid": "acc123",
+            "accesscode": "acc123",
+            "accessname": "HR"
+        },
+        {
+            "id": 2,
+            "accessid": "acc124",
+            "accesscode": "acc124",
+            "accessname": "Manager"
+        },
+        {
+            "id": 3,
+            "accessid": "acc125",
+            "accesscode": "acc125",
+            "accessname": "Team Lead"
+        },
+        {
+            "id": 4,
+            "accessid": "acc126",
+            "accesscode": "acc126",
+            "accessname": "Admin"
+        },
+        {
+            "id": 5,
+            "accessid": "acc127",
+            "accesscode": "acc127",
+            "accessname": "Employee"
+        },
+        {
+            "id": 6,
+            "accessid": "acc128",
+            "accesscode": "acc128",
+            "accessname": "Super Admin"
+        }
+    ]
+}

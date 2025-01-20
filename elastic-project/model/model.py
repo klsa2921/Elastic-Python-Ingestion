@@ -28,6 +28,15 @@ class Employee:
         self.empname = empname
         self.tablename=tablename
 
+class Employee2:
+    def __init__(self,id, empid, empname,tablename,accesslist,accessnamelist):
+        self.id=id
+        self.empid = empid
+        self.empname = empname
+        self.accesslist=accesslist
+        self.accessnamelist=accessnamelist
+        self.tablename=tablename
+
 class Salary:
     def __init__(self,id,empid,salary,tablename):
         self.id=id
