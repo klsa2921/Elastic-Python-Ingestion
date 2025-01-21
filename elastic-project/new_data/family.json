@@ -1,0 +1,542 @@
+[
+    {
+        "id": "fam001",
+        "empid": "emp12345",
+        "relation": "Father",
+        "name": "Robert Doe",
+        "age": "55",
+        "occupation": "Engineer",
+        "contact": "123-456-7890"
+    },
+    {
+        "id": "fam002",
+        "empid": "emp12345",
+        "relation": "Mother",
+        "name": "Jane Doe",
+        "age": "50",
+        "occupation": "Teacher",
+        "contact": "123-456-7891"
+    },
+    {
+        "id": "fam003",
+        "empid": "emp12346",
+        "relation": "Father",
+        "name": "Mark Smith",
+        "age": "58",
+        "occupation": "Doctor",
+        "contact": "987-654-3210"
+    },
+    {
+        "id": "fam004",
+        "empid": "emp12346",
+        "relation": "Mother",
+        "name": "Lisa Smith",
+        "age": "52",
+        "occupation": "Nurse",
+        "contact": "987-654-3211"
+    },
+    {
+        "id": "fam005",
+        "empid": "emp12347",
+        "relation": "Father",
+        "name": "Richard Brown",
+        "age": "60",
+        "occupation": "Architect",
+        "contact": "555-555-5555"
+    },
+    {
+        "id": "fam006",
+        "empid": "emp12347",
+        "relation": "Mother",
+        "name": "Patricia Brown",
+        "age": "57",
+        "occupation": "Designer",
+        "contact": "555-555-5556"
+    },
+    {
+        "id": "fam007",
+        "empid": "emp12347",
+        "relation": "Sister",
+        "name": "Emily Brown",
+        "age": "30",
+        "occupation": "Teacher",
+        "contact": "555-555-5557"
+    },
+    {
+        "id": "fam008",
+        "empid": "emp12348",
+        "relation": "Husband",
+        "name": "Michael Davis",
+        "age": "30",
+        "occupation": "Software Developer",
+        "contact": "333-333-3333"
+    },
+    {
+        "id": "fam009",
+        "empid": "emp12348",
+        "relation": "Wife",
+        "name": "Anna Davis",
+        "age": "28",
+        "occupation": "Graphic Designer",
+        "contact": "333-333-3334"
+    },
+    {
+        "id": "fam010",
+        "empid": "emp12349",
+        "relation": "Wife",
+        "name": "Emma Wilson",
+        "age": "28",
+        "occupation": "Graphic Designer",
+        "contact": "444-444-4444"
+    },
+    {
+        "id": "fam011",
+        "empid": "emp12349",
+        "relation": "Father",
+        "name": "David Wilson",
+        "age": "60",
+        "occupation": "Retired",
+        "contact": "444-444-4445"
+    },
+    {
+        "id": "fam012",
+        "empid": "emp12350",
+        "relation": "Father",
+        "name": "William Taylor",
+        "age": "65",
+        "occupation": "Professor",
+        "contact": "222-222-2222"
+    },
+    {
+        "id": "fam013",
+        "empid": "emp12350",
+        "relation": "Mother",
+        "name": "Susan Taylor",
+        "age": "63",
+        "occupation": "Artist",
+        "contact": "222-222-2223"
+    },
+    {
+        "id": "fam014",
+        "empid": "emp12351",
+        "relation": "Father",
+        "name": "James Anderson",
+        "age": "58",
+        "occupation": "Construction Worker",
+        "contact": "555-555-5557"
+    },
+    {
+        "id": "fam015",
+        "empid": "emp12351",
+        "relation": "Mother",
+        "name": "Marie Anderson",
+        "age": "55",
+        "occupation": "Chef",
+        "contact": "555-555-5558"
+    },
+    {
+        "id": "fam016",
+        "empid": "emp12351",
+        "relation": "Sister",
+        "name": "Olivia Anderson",
+        "age": "30",
+        "occupation": "Doctor",
+        "contact": "555-555-5559"
+    },
+    {
+        "id": "fam017",
+        "empid": "emp12352",
+        "relation": "Father",
+        "name": "Thomas Thomas",
+        "age": "60",
+        "occupation": "Engineer",
+        "contact": "111-111-1111"
+    },
+    {
+        "id": "fam018",
+        "empid": "emp12352",
+        "relation": "Mother",
+        "name": "Amy Thomas",
+        "age": "58",
+        "occupation": "Doctor",
+        "contact": "111-111-1112"
+    },
+    {
+        "id": "fam019",
+        "empid": "emp12352",
+        "relation": "Brother",
+        "name": "Chris Thomas",
+        "age": "32",
+        "occupation": "Designer",
+        "contact": "111-111-1113"
+    },
+    {
+        "id": "fam020",
+        "empid": "emp12353",
+        "relation": "Wife",
+        "name": "Olivia Jackson",
+        "age": "27",
+        "occupation": "Teacher",
+        "contact": "666-666-6666"
+    },
+    {
+        "id": "fam021",
+        "empid": "emp12353",
+        "relation": "Father",
+        "name": "David Jackson",
+        "age": "63",
+        "occupation": "Carpenter",
+        "contact": "666-666-6667"
+    },
+    {
+        "id": "fam022",
+        "empid": "emp12353",
+        "relation": "Mother",
+        "name": "Laura Jackson",
+        "age": "60",
+        "occupation": "Artist",
+        "contact": "666-666-6668"
+    },
+    {
+        "id": "fam023",
+        "empid": "emp12354",
+        "relation": "Husband",
+        "name": "Christopher White",
+        "age": "33",
+        "occupation": "Marketing Specialist",
+        "contact": "777-777-7777"
+    },
+    {
+        "id": "fam024",
+        "empid": "emp12354",
+        "relation": "Wife",
+        "name": "Sophia White",
+        "age": "30",
+        "occupation": "Graphic Designer",
+        "contact": "777-777-7778"
+    },
+    {
+        "id": "fam025",
+        "empid": "emp12354",
+        "relation": "Father",
+        "name": "George White",
+        "age": "65",
+        "occupation": "Retired",
+        "contact": "777-777-7779"
+    },
+    {
+        "id": "fam026",
+        "empid": "emp12355",
+        "relation": "Father",
+        "name": "George Harris",
+        "age": "62",
+        "occupation": "Doctor",
+        "contact": "888-888-8888"
+    },
+    {
+        "id": "fam027",
+        "empid": "emp12355",
+        "relation": "Mother",
+        "name": "Emma Harris",
+        "age": "58",
+        "occupation": "Lawyer",
+        "contact": "888-888-8889"
+    },
+    {
+        "id": "fam028",
+        "empid": "emp12355",
+        "relation": "Sister",
+        "name": "Lily Harris",
+        "age": "29",
+        "occupation": "Consultant",
+        "contact": "888-888-8890"
+    },
+    {
+        "id": "fam029",
+        "empid": "emp12356",
+        "relation": "Father",
+        "name": "James Lee",
+        "age": "59",
+        "occupation": "Chef",
+        "contact": "999-999-9999"
+    },
+    {
+        "id": "fam030",
+        "empid": "emp12356",
+        "relation": "Mother",
+        "name": "Susan Lee",
+        "age": "55",
+        "occupation": "Artist",
+        "contact": "999-999-9990"
+    },
+    {
+        "id": "fam031",
+        "empid": "emp12357",
+        "relation": "Father",
+        "name": "Mark Clark",
+        "age": "64",
+        "occupation": "Retired",
+        "contact": "555-777-8889"
+    },
+    {
+        "id": "fam032",
+        "empid": "emp12357",
+        "relation": "Mother",
+        "name": "Patricia Clark",
+        "age": "60",
+        "occupation": "Scientist",
+        "contact": "555-777-8880"
+    },
+    {
+        "id": "fam033",
+        "empid": "emp12357",
+        "relation": "Sister",
+        "name": "Rebecca Clark",
+        "age": "34",
+        "occupation": "Teacher",
+        "contact": "555-777-8881"
+    },
+    {
+        "id": "fam034",
+        "empid": "emp12358",
+        "relation": "Father",
+        "name": "Robert Harris",
+        "age": "66",
+        "occupation": "Engineer",
+        "contact": "777-555-3333"
+    },
+    {
+        "id": "fam035",
+        "empid": "emp12358",
+        "relation": "Mother",
+        "name": "Julia Harris",
+        "age": "62",
+        "occupation": "Teacher",
+        "contact": "777-555-3334"
+    },
+    {
+        "id": "fam036",
+        "empid": "emp12358",
+        "relation": "Brother",
+        "name": "Lucas Harris",
+        "age": "33",
+        "occupation": "Software Developer",
+        "contact": "777-555-3335"
+    },
+    {
+        "id": "fam037",
+        "empid": "emp12359",
+        "relation": "Father",
+        "name": "John Walker",
+        "age": "67",
+        "occupation": "Architect",
+        "contact": "444-222-8889"
+    },
+    {
+        "id": "fam038",
+        "empid": "emp12359",
+        "relation": "Mother",
+        "name": "Jessica Walker",
+        "age": "63",
+        "occupation": "Writer",
+        "contact": "444-222-8888"
+    },
+    {
+        "id": "fam039",
+        "empid": "emp12359",
+        "relation": "Sister",
+        "name": "Emily Walker",
+        "age": "30",
+        "occupation": "Photographer",
+        "contact": "444-222-8887"
+    },
+    {
+        "id": "fam040",
+        "empid": "emp12360",
+        "relation": "Father",
+        "name": "Samuel Young",
+        "age": "61",
+        "occupation": "Mechanic",
+        "contact": "555-666-4445"
+    },
+    {
+        "id": "fam041",
+        "empid": "emp12360",
+        "relation": "Mother",
+        "name": "Anna Young",
+        "age": "59",
+        "occupation": "Doctor",
+        "contact": "555-666-4446"
+    },
+    {
+        "id": "fam042",
+        "empid": "emp12360",
+        "relation": "Brother",
+        "name": "Ethan Young",
+        "age": "25",
+        "occupation": "Teacher",
+        "contact": "555-666-4447"
+    },
+    {
+        "id": "fam043",
+        "empid": "emp12361",
+        "relation": "Father",
+        "name": "John King",
+        "age": "65",
+        "occupation": "Consultant",
+        "contact": "777-888-9999"
+    },
+    {
+        "id": "fam044",
+        "empid": "emp12361",
+        "relation": "Mother",
+        "name": "Emily King",
+        "age": "60",
+        "occupation": "Teacher",
+        "contact": "777-888-9990"
+    },
+    {
+        "id": "fam045",
+        "empid": "emp12361",
+        "relation": "Brother",
+        "name": "Michael King",
+        "age": "32",
+        "occupation": "Artist",
+        "contact": "777-888-9991"
+    },
+    {
+        "id": "fam046",
+        "empid": "emp12362",
+        "relation": "Father",
+        "name": "Robert Scott",
+        "age": "62",
+        "occupation": "Doctor",
+        "contact": "444-333-2222"
+    },
+    {
+        "id": "fam047",
+        "empid": "emp12362",
+        "relation": "Mother",
+        "name": "Linda Scott",
+        "age": "58",
+        "occupation": "Engineer",
+        "contact": "444-333-2223"
+    },
+    {
+        "id": "fam048",
+        "empid": "emp12362",
+        "relation": "Sister",
+        "name": "Carol Scott",
+        "age": "33",
+        "occupation": "Photographer",
+        "contact": "444-333-2224"
+    },
+    {
+        "id": "fam049",
+        "empid": "emp12363",
+        "relation": "Father",
+        "name": "Charles Green",
+        "age": "60",
+        "occupation": "Architect",
+        "contact": "111-222-3333"
+    },
+    {
+        "id": "fam050",
+        "empid": "emp12363",
+        "relation": "Mother",
+        "name": "Grace Green",
+        "age": "58",
+        "occupation": "Scientist",
+        "contact": "111-222-3334"
+    },
+    {
+        "id": "fam051",
+        "empid": "emp12363",
+        "relation": "Sister",
+        "name": "Lily Green",
+        "age": "30",
+        "occupation": "Designer",
+        "contact": "111-222-3335"
+    },
+    {
+        "id": "fam052",
+        "empid": "emp12364",
+        "relation": "Father",
+        "name": "Paul Blue",
+        "age": "64",
+        "occupation": "Engineer",
+        "contact": "777-666-5555"
+    },
+    {
+        "id": "fam053",
+        "empid": "emp12364",
+        "relation": "Mother",
+        "name": "Linda Blue",
+        "age": "60",
+        "occupation": "Teacher",
+        "contact": "777-666-5556"
+    },
+    {
+        "id": "fam054",
+        "empid": "emp12364",
+        "relation": "Sister",
+        "name": "Olivia Blue",
+        "age": "32",
+        "occupation": "Chef",
+        "contact": "777-666-5557"
+    },
+    {
+        "id": "fam055",
+        "empid": "emp12365",
+        "relation": "Father",
+        "name": "Steven Brown",
+        "age": "63",
+        "occupation": "Doctor",
+        "contact": "444-777-5555"
+    },
+    {
+        "id": "fam056",
+        "empid": "emp12365",
+        "relation": "Mother",
+        "name": "Monica Brown",
+        "age": "60",
+        "occupation": "Artist",
+        "contact": "444-777-5556"
+    },
+    {
+        "id": "fam057",
+        "empid": "emp12365",
+        "relation": "Sister",
+        "name": "Rachel Brown",
+        "age": "29",
+        "occupation": "Consultant",
+        "contact": "444-777-5557"
+    },
+    {
+        "id": "fam058",
+        "empid": "emp12366",
+        "relation": "Father",
+        "name": "David White",
+        "age": "65",
+        "occupation": "Consultant",
+        "contact": "333-444-5555"
+    },
+    {
+        "id": "fam059",
+        "empid": "emp12366",
+        "relation": "Mother",
+        "name": "Eliza White",
+        "age": "63",
+        "occupation": "Writer",
+        "contact": "333-444-5556"
+    },
+    {
+        "id": "fam060",
+        "empid": "emp12366",
+        "relation": "Sister",
+        "name": "Jessica White",
+        "age": "28",
+        "occupation": "Engineer",
+        "contact": "333-444-5557"
+    }
+]

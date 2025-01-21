@@ -1,6 +1,6 @@
 import json
 from elasticsearch import Elasticsearch, helpers
-from model.model import Employee,Address,FamilyMember,Salary,JoiningDate,Leaves,Employee2
+from model.model import Employee,Address,FamilyMember,Salary,JoiningDate,Leaves,Employee2,Salary2
 import csv
 from run_querys import run_query_1,run_query_2,run_query_3
 from test import compare_results
@@ -64,96 +64,170 @@ def load_csv_files():
     with open(employee_file_path,newline='',encoding='utf-8') as f:
         with open(employee_json_file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
+            print("processing employee data")
             for item in data['employees']:
                 employee = Employee2(
                     id=item['id'],
                     empid=item['empid'],
                     empname=item['empname'],
-                    accesslist='#'.join(item['accesslist']),
-                    accessnamelist='#'.join(item['accessnamelist']),
+                    role='#'.join(item['role']),
                     tablename='employee'
                 )
                 employees.append(employee)
+            print("processing salary data")
+            for item in data["salarys"]:
+                salary=Salary2(
+                    id=item["salaryid"],
+                    empid=item["empid"],
+                    salary=int(item["amount"]),
+                    role='#'.join(item["role"]),
+                    tablename='salary'
+                )
+                salarys.append(salary)
 
-    with open(family_file_path,newline='',encoding='utf-8') as f:
-        reader=csv.DictReader(f)
-        for row in reader:
-            member=FamilyMember(
-                id=row['id'],
-                empid=row['empid'],
-                relation=row['relation'],
-                name=row['name'],
-                age=row['age'],
-                occupation=row['occupation'],
-                contact=row['contact'],
-                tablename='family'
-            )
-            family_members.append(member)
+            print("processing joining date data")
+            for item in data["joiningDates"]:
+                date=JoiningDate(
+                    id=item["id"],
+                    empid=item["empid"],
+                    joinDate=item["joinDate"],
+                    tablename='joinDate'
+                )
+                joiningDate.append(date)
+            print("processing leave data")
+            for item in data["leaves"]:
+                leave=Leaves(
+                    id=item["id"],
+                    empid=item["empid"],
+                    leave_type=item["leave_type"],
+                    leave_start_date=item["leave_start_date"],
+                    leave_end_date=item["leave_end_date"],
+                    number_of_days=item["number_of_days"],
+                    leave_status=item["leave_status"],
+                    tablename='leaves'
+                )
+                leave_records.append(leave)
+            print("processing address data")
+            for item  in data["addresses"]:
+                address=Address(
+                    id=item["id"],
+                    city=item["city"],
+                    empid=item["empid"],
+                    street=item["street"],
+                    state=item["state"],
+                    zipcode=item["zipcode"],
+                    country=item["country"],
+                    contact=item["contact"],
+                    tablename='address'
+                )
+                addresses.append(address)
 
-    with open(address_file_path,newline='',encoding='utf-8') as f:
-        reader=csv.DictReader(f)
-        for row in reader:
+            print("processing family data")
+            for item in data["families"]:
+                member=FamilyMember(
+                    id=item["id"],
+                    empid=item["empid"],
+                    relation=item["relation"],
+                    name=item["name"],
+                    age=item["age"],
+                    occupation=item["occupation"],
+                    contact=item["contact"],
+                    tablename='family'
+                )
+                family_members.append(member)
+            
 
-            address=Address(
-                id = row["id"],
-                city = row["city"],
-                empid = row["empid"],
-                street=row["street"],
-                state = row["state"],
-                zipcode = row["zipcode"],
-                country = row["country"],
-                contact = row["contact"],
-                tablename='address'
-            )
-            addresses.append(address)
+    # with open(family_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     for row in reader:
+    #         member=FamilyMember(
+    #             id=row['id'],
+    #             empid=row['empid'],
+    #             relation=row['relation'],
+    #             name=row['name'],
+    #             age=row['age'],
+    #             occupation=row['occupation'],
+    #             contact=row['contact'],
+    #             tablename='family'
+    #         )
+    #         family_members.append(member)
+
+    # with open(address_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     for row in reader:
+
+    #         address=Address(
+    #             id = row["id"],
+    #             city = row["city"],
+    #             empid = row["empid"],
+    #             street=row["street"],
+    #             state = row["state"],
+    #             zipcode = row["zipcode"],
+    #             country = row["country"],
+    #             contact = row["contact"],
+    #             tablename='address'
+    #         )
+    #         addresses.append(address)
     
-    with open(salary_file_path,newline='',encoding='utf-8') as f:
-        reader=csv.DictReader(f)
-        print("opening file")
-        for row in reader:
-            salary=Salary(
-                id = row["id"],
-                empid = row["empid"],
-                salary=int(row["salary"]),
-                tablename='salary'
-            )
-            salarys.append(salary)
+    # with open(salary_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     print("opening file")
+    #     for row in reader:
+    #         salary=Salary(
+    #             id = row["id"],
+    #             empid = row["empid"],
+    #             salary=int(row["salary"]),
+    #             tablename='salary'
+    #         )
+    #         salarys.append(salary)
+    
+    # with open(salary_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     print("opening file")
+    #     for row in reader:
+    #         salary=Salary(
+    #             id = row["id"],
+    #             empid = row["empid"],
+    #             salary=int(row["salary"]),
+    #             tablename='salary'
+    #         )
+    #         salarys.append(salary)
 
-    with open(joining_file_path,newline='',encoding='utf-8') as f:
-        reader=csv.DictReader(f)
-        for row in reader:
+    # with open(joining_file_path,newline='',encoding='utf-8') as f:
+    #     reader=csv.DictReader(f)
+    #     for row in reader:
 
-            date=JoiningDate(
-                id = row["id"],
-                empid = row["empid"],
-                joinDate=row["joinDate"],
-                tablename='joinDate'
-            )
-            joiningDate.append(date)
+    #         date=JoiningDate(
+    #             id = row["id"],
+    #             empid = row["empid"],
+    #             joinDate=row["joinDate"],
+    #             tablename='joinDate'
+    #         )
+    #         joiningDate.append(date)
 
-    with open(leave_file_path, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            leave = Leaves(
-                id=row["id"],
-                empid=row["empid"],
-                leave_type=row["leave_type"],
-                leave_start_date=row["leave_start_date"],
-                leave_end_date=row["leave_end_date"],
-                number_of_days=row["number_of_days"],
-                leave_status=row["leave_status"],
-                tablename='leaves'
-            )
-            leave_records.append(leave)
+    # with open(leave_file_path, newline='', encoding='utf-8') as f:
+    #     reader = csv.DictReader(f)
+    #     for row in reader:
+    #         leave = Leaves(
+    #             id=row["id"],
+    #             empid=row["empid"],
+    #             leave_type=row["leave_type"],
+    #             leave_start_date=row["leave_start_date"],
+    #             leave_end_date=row["leave_end_date"],
+    #             number_of_days=row["number_of_days"],
+    #             leave_status=row["leave_status"],
+    #             tablename='leaves'
+    #         )
+    #         leave_records.append(leave)
     
     
     return employees,family_members,addresses,salarys,joiningDate,leave_records
 
-# es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
-es = Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}])
+es = Elasticsearch([{'host': '192.168.1.27', 'port': 9200, 'scheme': 'http'}])
+# es = Elasticsearch([{'host': 'localhost', 'port': 9200, 'scheme': 'http'}])
 
 
-parent_child_index = 'employee-parent-child23'
+parent_child_index = 'employee-parent-child25'
 
 nested_index='employee-nested10'
 file_path = 'employee_nested_data.json'
@@ -193,22 +267,36 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
     #     }
     
     for employee in employees:
+    
         yield {
             "_op_type": "index",  
             "_index": index_name,
-            "_id": employee.id,  
+            "_id": employee.empid,  
             "_source": {
-                "id": employee.id,
                 "empid": employee.empid,
                 "empname": employee.empname,
-                "accesslist": employee.accesslist,
-                "accessnamelist": employee.accessnamelist,
-                "tablename": employee.tablename,
+                "role":employee.role,
+                "tablename":employee.tablename,
                 "emp-join-field": {"name": "employee"}
             }
         }
 
+    # for employee in employees:
+    #     yield {
+    #         "_op_type": "index",  
+    #         "_index": index_name,
+    #         "_id": employee.empid,  
+    #         "_source": {
+    #             "id": employee.id,
+    #             "empid": employee.empid,
+    #             "empname": employee.empname,
+    #             "role": employee.role,
+    #             "tablename": employee.tablename,
+    #             "emp-join-field": {"name": "employee"}
+    #         }
+    #     }
 
+    print("Processing family data")
     for family_member in family_members:
         yield {
             "_op_type": "index",
@@ -227,7 +315,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
             }
         }
 
-
+    print("Processing address data")
     for address in addresses:
         yield {
             "_op_type": "index",
@@ -245,7 +333,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
                 "emp-join-field": {"name": "address", "parent": address.empid}
             }
         }
-    
+    print("Processing salary data")
     try:
         for salary in salarys:
             yield {
@@ -257,6 +345,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
                     "id": salary.id,
                     "empid": salary.empid,
                     "salary": salary.salary,
+                    "role": salary.role,
                     "tablename": salary.tablename,
                     "emp-join-field": {"name": "salary", "parent": salary.empid}
                 }
@@ -279,7 +368,7 @@ def generate_bulk_data_for_parent_child(employees, family_members, addresses,sal
                 "emp-join-field": {"name": "joiningDate", "parent": joinDate.empid}
             }
         }
-    
+    print("Processing leave data")
     for leave in leave_records:
         yield {
             "_op_type": "index",  # Operation type for Elasticsearch

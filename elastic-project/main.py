@@ -85,7 +85,7 @@ def load_csv_files():
     
     return employees,family_members,addresses
 
-es = Elasticsearch([{'host': '192.168.1.28', 'port': 9301, 'scheme': 'http'}])
+es = Elasticsearch([{'host': '192.168.1.27', 'port': 9200, 'scheme': 'http'}])
 
 parent_child_index = 'employee-parent-child10'
 nested_index='employee-nested10'
@@ -259,12 +259,12 @@ try:
     # employees, family_members, addresses = load_data(file_path)
     employees, family_members, addresses = load_csv_files()
     helpers.bulk(es, generate_bulk_data_for_parent_child(employees, family_members, addresses,parent_child_index))
-    helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, nested_index))
+    # helpers.bulk(es, generate_bulk_data_for_nested(employees, family_members, addresses, nested_index))
     print("Data indexed successfully!")
 except Exception as e:
     print(f"Error indexing data: {e}")
 
-run_test_queries()
+# run_test_queries()
 
 
 

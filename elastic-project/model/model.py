@@ -29,12 +29,11 @@ class Employee:
         self.tablename=tablename
 
 class Employee2:
-    def __init__(self,id, empid, empname,tablename,accesslist,accessnamelist):
+    def __init__(self,id, empid, empname,tablename,role):
         self.id=id
         self.empid = empid
         self.empname = empname
-        self.accesslist=accesslist
-        self.accessnamelist=accessnamelist
+        self.role=role
         self.tablename=tablename
 
 class Salary:
@@ -42,6 +41,14 @@ class Salary:
         self.id=id
         self.empid=empid
         self.salary=salary
+        self.tablename=tablename
+
+class Salary2:
+    def __init__(self,id,empid,salary,role,tablename):
+        self.id=id
+        self.empid=empid
+        self.salary=salary
+        self.role=role
         self.tablename=tablename
 
 class JoiningDate:
